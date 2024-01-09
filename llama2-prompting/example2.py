@@ -1,6 +1,6 @@
 # load the large language model file
 from llama_cpp import Llama
-LLM = Llama(model_path="./llama-2-7b-chat.ggmlv3.q8_0.bin",
+LLM = Llama(model_path="./models/llama-2-7b-chat.ggmlv3.q8_0.bin",
               n_ctx = 2048,            # context window size
               n_gpu_layers = 1,        # enable GPU
               use_mlock = True)        # enable memory lock so not swap
