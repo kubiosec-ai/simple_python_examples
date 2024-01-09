@@ -8,7 +8,9 @@ speech_file_path = Path(__file__).parent / "speech.mp3"
 
 # Create text-to-speech audio file
 response = openai.audio.speech.create(
-    model="tts-1", voice="alloy", input="DEVSECOPS and AI are the new way forward securing apps"
+    model="tts-1",
+    voice="alloy",
+    input="DEVSECOPS and AI are the new way forward securing apps"
     )
 
 response.stream_to_file(speech_file_path)
@@ -24,3 +26,4 @@ translation = openai.audio.translations.create(
     )
 
 print(translation.text)
+
