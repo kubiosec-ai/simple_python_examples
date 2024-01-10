@@ -3,6 +3,8 @@ from langchain_openai import ChatOpenAI
 from langchain.tools import ShellTool
 
 shell_tool = ShellTool()
+# print(shell_tool.run({"commands": ["echo 'Hello World!'", "time"]}))
+
 llm = ChatOpenAI(temperature=0)
 
 shell_tool.description = shell_tool.description + f"args {shell_tool.args}".replace(
