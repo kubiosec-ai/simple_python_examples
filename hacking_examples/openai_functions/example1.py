@@ -75,7 +75,7 @@ def llm(user_question):
         )
         return function_args, second_response
 
-functionarg, answer = llm("List me all products)
-# functionarg, answer = llm("Drop all tables in the database)
+functionarg, answer = llm("List me all products")
+# functionarg, answer = llm("Drop all tables in the database")
 print("Thee SQL statement is : ", functionarg['sql_query']) 
 print(answer.choices[0].message.content)
