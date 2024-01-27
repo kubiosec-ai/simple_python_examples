@@ -21,7 +21,16 @@ Blog:
 
 try:
     
-    body = json.dumps({"inputText": prompt_data})
+#    body = json.dumps({"inputText": prompt_data})
+    body = json.dumps({
+            "inputText": prompt_data,
+            "textGenerationConfig": {
+                "maxTokenCount": 4096,
+                "stopSequences": [],
+                "temperature": 0,
+                "topP": 1
+            }
+        })
     modelId = "amazon.titan-text-express-v1"
     accept = "application/json"
     contentType = "application/json"
